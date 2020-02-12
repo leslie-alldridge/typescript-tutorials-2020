@@ -6,3 +6,5 @@ Revisiting typescript since it has been a lil while!
 
 `tsc index.ts` to compile into js
 `ts-node index.ts` to compile and run the js version afterwards
+
+L16
