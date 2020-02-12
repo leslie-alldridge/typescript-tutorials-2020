@@ -10,7 +10,11 @@ interface Todo {
 
 axios.get(url).then(response => {
   const todo = response.data as Todo;
+  const { id, title, completed } = todo;
 
-  const { id, title, completed } = response.data;
-  console.log(id, title, completed);
+  logTodo(id, title, completed);
 });
+
+const logTodo = (id: number, title: string, completed: boolean) => {
+  console.log(`ID: ${id} \nTitle: ${title} \nCompleted: ${completed}`);
+};
