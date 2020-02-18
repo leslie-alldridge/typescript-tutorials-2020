@@ -36,9 +36,19 @@ console.log(coordinates);
 let words = ["red", "green", "blue"];
 let foundWord: boolean;
 
-words.forEach(element => {
-  if (element === "green") {
+words.forEach(word => {
+  if (word === "green") {
     foundWord = true;
     console.log(foundWord);
+  }
+});
+
+// Variable whose type cannot be inferred correctly
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+numbers.forEach(number => {
+  if (number > 0) {
+    numberAboveZero = number;
   }
 });
